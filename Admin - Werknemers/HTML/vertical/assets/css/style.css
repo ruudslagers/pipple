@@ -16,6 +16,7 @@ body {
   font-size: 0.9rem;
   background-color: #f5f5f5;
   padding-bottom: 60px;
+  background-color: red;
 }
 
 logo-pipple {
@@ -1268,8 +1269,8 @@ a.btn:focus {
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active,
 .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover,
 .open > .dropdown-toggle.btn-success {
-  background-color: #16957c;
-  border-color: #16957c;
+  background-color: #8b42b7;
+  border-color: #8b42b7;
   color: #ffffff;
 }
 
