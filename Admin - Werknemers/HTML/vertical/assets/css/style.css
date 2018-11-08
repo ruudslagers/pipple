@@ -137,7 +137,7 @@ a:hover{
 }
 
 .nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
-  background-color: #039cfd;
+  background-color: #96ddff;
 }
 
 .dropdown-item:focus, .dropdown-item:hover,
@@ -924,7 +924,7 @@ body.fixed-left .side-menu.left {
 .side-bar.right-bar {
   float: right !important;
   right: -266px;
-  top: 71px;
+  top: 70px;
 }
 
 .side-bar {
