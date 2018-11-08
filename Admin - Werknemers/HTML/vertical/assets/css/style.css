@@ -284,33 +284,43 @@ a:hover{
   z-index: 999;
 }
 
-.topbar .topbar-left {
-  background: url('../logo/favicon.png');
+.topbar .topbar-left .logo-klein {
+  padding-top: 30%;
+  background: #ffffff;
   background-size: cover;
   float: left;
   text-align: center;
-  height: 70px;
+  height: 80px;
+  position: relative;
+  width: 100px;
+  z-index: 1;
+}
+
+.topbar .topbar-left .logo-groot {
+  background: #ffffff;
+  background-size: cover;
+  float: left;
+  text-align: center;
+  height: 80px;
   position: relative;
   width: 250px;
   z-index: 1;
 }
 
-/* For devices 400px and larger: */
-@media only screen and (min-device-width: 500px) {
-.topbar .topbar-left {
-  background: url('../logo/Pipple-Logo-small.png');
-  background-size: cover;
-  float: left;
-  text-align: center;
-  height: 70px;
-  position: relative;
-  width: 250px;
-  z-index: 1;
-    }
-}
-
-.topbar .topbar-left .logo {
+/* For devices 850px and larger: */
+@media only screen and (min-device-width: 850px) {
+.topbar .topbar-left .logo-klein {
   line-height: 70px;
+  display: none;
+  }
+}
+
+/* For devices 850px and smaller: */
+@media only screen and (max-device-width: 850px) {
+.topbar .topbar-left .logo-groot {
+  line-height: 100px;
+  display: none;
+    }
 }
 
 
