@@ -4690,7 +4690,14 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
 .logo-header {
 width: 100%;
 height: 84.05px;
-background-color: white; 
+background-color: white;
+}
+
+.plogo{
+  position: absolute;
+  left: 100px;
+  top: 10px;
+  height: 65px;
 }
 
 .account-pages {
