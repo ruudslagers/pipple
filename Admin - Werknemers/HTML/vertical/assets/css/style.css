@@ -18,6 +18,11 @@ body {
   padding-bottom: 60px;
 }
 
+logo-pipple {
+    background-color: aqua;
+    height: 500px;
+}
+
 .page-title-box {
   background-color: #ffffff;
   margin: -20px -20px 20px -20px;
@@ -273,7 +278,8 @@ a {
 }
 
 .topbar .topbar-left {
-  background: #ffffff;
+  background: url('../logo/favicon.png');
+  background-size: cover;
   float: left;
   text-align: center;
   height: 70px;
@@ -282,9 +288,24 @@ a {
   z-index: 1;
 }
 
+/* For devices 400px and larger: */
+@media only screen and (min-device-width: 500px) {
+.topbar .topbar-left {
+  background: url('../logo/Pipple-Logo-small.png');
+  background-size: cover;
+  float: left;
+  text-align: center;
+  height: 70px;
+  position: relative;
+  width: 250px;
+  z-index: 1;
+    }
+}
+
 .topbar .topbar-left .logo {
   line-height: 70px;
 }
+
 
 .navbar-custom {
   background-color: #2b3d51;
