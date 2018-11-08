@@ -34,6 +34,7 @@ logo-pipple {
 .page-title-box .page-title {
   margin-bottom: 0;
   font-size: 1.2rem;
+  color: #002f65;
 }
 
 .page-title-box .breadcrumb {
@@ -85,6 +86,12 @@ svg {
 a {
   outline: none !important;
   text-decoration: none !important;
+  color: #99d4fc;
+}
+
+a:hover{
+  color: #6198bd;
+  transition: .2s ease-in;
 }
 
 .row {
@@ -308,7 +315,7 @@ a {
 
 
 .navbar-custom {
-  background-color: #2b3d51;
+  background-color: #063161;
   border-radius: 0;
   margin-bottom: 0;
   padding: 0 10px;
@@ -413,6 +420,8 @@ a {
 .content-page {
   margin-left: 250px;
   overflow: hidden;
+  background: url('../images/big/background.jpeg') center center no-repeat;
+  background-size: cover;
 }
 
 .content-page .content {
@@ -581,7 +590,7 @@ body.fixed-left .side-menu.left {
 
 #sidebar-menu > ul > li > a.active {
   color: #ffffff !important;
-  background-color: #64b0f2;
+  background-color: #99d4fc;
 }
 
 .menu-title {
@@ -593,14 +602,15 @@ body.fixed-left .side-menu.left {
 }
 
 .footer {
-  border-top: 1px solid rgba(152, 166, 173, 0.2);
-  bottom: 0;
-  color: #818a91;
-  text-align: left !important;
-  padding: 19px 30px 20px;
-  position: absolute;
-  right: 0;
-  left: 250px;
+    border-top: 1px solid rgba(152, 166, 173, 0.2);
+    bottom: 0;
+    color: #002f65;
+    text-align: left !important;
+    padding: 19px 30px 20px;
+    position: absolute;
+    right: 0;
+    left: 250px;
+    background: #fff;
 }
 
 .content-page > .content {
@@ -2923,7 +2933,7 @@ h3.timeline-title {
 }
 
 .badge-primary {
-  background-color: #039cfd !important;
+  background-color: #1d79b3 !important;
 }
 
 .badge-success {
