@@ -34,8 +34,8 @@ logo-pipple {
 
 .page-title-box .page-title {
   margin-bottom: 0;
-  font-size: 1.2rem;
-  color: #002f65;
+  font-size: 1.7rem;
+  color: rgba(43, 61, 81, 0.8);
 }
 
 .page-title-box .breadcrumb {
@@ -106,7 +106,7 @@ a:hover{
 }
 
 .bg-primary {
-  background-color: #039cfd !important;
+  background-color: #99d4fc  !important;
 }
 
 .bg-success {
@@ -118,7 +118,7 @@ a:hover{
 }
 
 .bg-warning {
-  background-color: #f1b53d !important;
+  background-color: #bc2d1e !important;
 }
 
 .bg-danger {
@@ -126,11 +126,11 @@ a:hover{
 }
 
 .bg-purple {
-  background-color: #9261c6 !important;
+  background-color: #18acff !important;
 }
 
 .bg-pink {
-  background-color: #ff7aa3 !important;
+  background-color: #8b42b7 !important;
 }
 
 .bg-dark {
@@ -1262,15 +1262,15 @@ a.btn:focus {
 }
 
 .btn-success {
-  background-color: #1bb99a;
-  border-color: #1bb99a;
+  background-color: #8b42b7;
+  border-color: #8b42b7;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active,
 .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover,
 .open > .dropdown-toggle.btn-success {
-  background-color: #8b42b7;
-  border-color: #8b42b7;
+  background-color: #540086;
+  border-color: #540086;
   color: #ffffff;
 }
 
@@ -3279,7 +3279,7 @@ h3.timeline-title {
 }
 
 .fc-state-down, .fc-state-active, .fc-state-disabled {
-  background-color: #64b0f2 !important;
+  background-color: #99d4fc !important;
   color: #ffffff !important;
   text-shadow: none !important;
 }
