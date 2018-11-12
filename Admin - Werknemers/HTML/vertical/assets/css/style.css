@@ -33,8 +33,8 @@ logo-pipple {
 
 .page-title-box .page-title {
   margin-bottom: 0;
-  font-size: 1.2rem;
-  color: #002f65;
+  font-size: 1.7rem;
+  color: rgba(43, 61, 81, 0.8);
 }
 
 .page-title-box .breadcrumb {
@@ -51,6 +51,11 @@ logo-pipple {
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
           box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+}
+
+.card-box img { 
+height: 5%;
+width:12%;
 }
 
 .header-title {
@@ -105,7 +110,7 @@ a:hover{
 }
 
 .bg-primary {
-  background-color: #039cfd !important;
+  background-color: #99d4fc  !important;
 }
 
 .bg-success {
@@ -117,7 +122,7 @@ a:hover{
 }
 
 .bg-warning {
-  background-color: #f1b53d !important;
+  background-color: #bc2d1e !important;
 }
 
 .bg-danger {
@@ -125,11 +130,11 @@ a:hover{
 }
 
 .bg-purple {
-  background-color: #9261c6 !important;
+  background-color: #18acff !important;
 }
 
 .bg-pink {
-  background-color: #ff7aa3 !important;
+  background-color: #8b42b7 !important;
 }
 
 .bg-dark {
@@ -1261,15 +1266,15 @@ a.btn:focus {
 }
 
 .btn-success {
-  background-color: #1bb99a;
-  border-color: #1bb99a;
+  background-color: #8b42b7;
+  border-color: #8b42b7;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active,
 .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover,
 .open > .dropdown-toggle.btn-success {
-  background-color: #8b42b7;
-  border-color: #8b42b7;
+  background-color: #540086;
+  border-color: #540086;
   color: #ffffff;
 }
 
@@ -3081,6 +3086,21 @@ h3.timeline-title {
   margin-bottom: 20px !important;
 }
 
+.pippelaarsh6 h6 { 
+ position: absolute;
+  left: 125px;
+  top: 40px;
+}
+
+.persoonlijk-stukje {
+  font-size: 0.9rem;
+  color: #6c757d!important;
+  font-family: inherit;
+  position: absolute;
+  left: 125px;
+  top: 70px;
+}
+
 .m-b-30 {
   margin-bottom: 30px !important;
 }
@@ -3278,7 +3298,7 @@ h3.timeline-title {
 }
 
 .fc-state-down, .fc-state-active, .fc-state-disabled {
-  background-color: #64b0f2 !important;
+  background-color: #99d4fc !important;
   color: #ffffff !important;
   text-shadow: none !important;
 }
@@ -24834,3 +24854,74 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
   content: "\e67f";
 }
 /*# sourceMappingURL=style.css.map */
+
+/*CSS door Matthew Kouwenberg*/
+
+.vrijdagMiddagLunch{
+    height: 162px;
+}
+
+.card-box .aanmeld-titel{
+    text-align: center;
+}
+
+.card-box .aanwezig{
+    padding: 10px 20px;
+    background: #1d79b3;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 10px;
+    border-radius: 5px;
+    border: none;
+}
+.card-box .aanwezig i{
+    vertical-align: middle;
+    padding: 0 0 0 5px;
+}
+.card-box .aanwezig.checked{
+    background: #00bd97;
+    opacity: .75;
+    cursor: auto;
+    transition: 1s ease-in;
+}
+.card-box .aanwezig.un-checked{
+    background: #ff4d3b;
+    opacity: .75;
+    cursor: auto;
+}
+.card-box .afwezig{
+    text-align: center;
+    display: block;
+}
+
+.aanwezigheidLijst{
+    padding: 0;
+    width: 100%;
+    margin: 20px auto;
+}
+.aanwezigheidLijst li{
+    display: block;
+    list-style: none;
+    padding: 10px 20px;
+    background: #f9f9f9;
+}
+.aanwezigheidLijst li .zmdi-check{
+    color: #00bd97;
+}
+.aanwezigheidLijst li .zmdi-close{
+    color: #ff4d3b;
+}
+.aanwezigheidLijst li:nth-child(even){
+    background: #fff;
+}
+.aanwezigheidLijst span{
+    float: right;
+}
+.aanwezigheidLijst #voorbeeld1, .aanwezigheidLijst #voorbeeld2, .aanwezigheidLijst #voorbeeld3{
+    display: none;
+}
+.aanwezigheid h5{
+    text-align: center;
+}
