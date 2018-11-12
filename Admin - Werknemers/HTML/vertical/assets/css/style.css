@@ -3084,7 +3084,10 @@ h3.timeline-title {
 
 .m-b-20 {
   margin-bottom: 20px !important;
-  position: absolute;
+}
+
+.pippelaarsh6 h6 { 
+ position: absolute;
   left: 125px;
   top: 40px;
 }
