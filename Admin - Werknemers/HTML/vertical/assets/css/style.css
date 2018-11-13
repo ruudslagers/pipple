@@ -24975,3 +24975,33 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+.logo-klein img{
+    height: 60%; width: auto;
+}
+.logo-groot img{
+    height: 70px; width: 100%;
+}
+.agendaHome{
+    min-height: 340px; width: 100%;
+}
+.negeerbtn{
+    margin-left: 5px;
+}
+.pipflash{
+    height: 340px; text-align: center; background-image: url(../pipple-flash/Pippie.png); width: 100%; background-size: contain; background-repeat: no-repeat; background-position: 100% top;
+}
+.btnpipflash{
+    width: 70%; height: 40px; margin-top: 210px;
+}
+.btn-blue{
+        padding: 10px 20px;
+    background: #1d79b3;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 10px;
+    border-radius: 5px;
+    border: none;
+}
