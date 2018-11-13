@@ -2799,26 +2799,23 @@ h3.timeline-title {
 ============= */
 .count-down-page {
   max-width: 1170px;
-  margin: 50px auto;
 }
 
 #count-down {
-  margin-top: 50px;
 }
 
 #count-down .clock-presenter {
   height: 140px;
   line-height: 30px;
-  padding: 0 30px;
+  padding: 0 6px;
   text-align: center;
 }
 
 #count-down .clock-presenter .digit {
-  margin-top: 20px;
-  font-size: 60px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 60px;
-  height: 60px;
+  height: 50px;
   display: inline-block;
   overflow: hidden;
   text-align: center;
@@ -2829,11 +2826,9 @@ h3.timeline-title {
 #count-down .clock-presenter .note {
   position: relative;
   bottom: 0;
-  padding-top: 5px;
   cursor: default;
   font-size: 16px;
-  color: #1bb99a;
-  text-transform: uppercase;
+  color: #99d4fc;
 }
 
 @media (max-width: 992px) {
@@ -3088,8 +3083,8 @@ h3.timeline-title {
 
 .pippelaarsh6 h6 { 
  position: absolute;
-  left: 125px;
-  top: 40px;
+  left: 25%;
+  top: 15%;
 }
 
 .persoonlijk-stukje {
@@ -3097,8 +3092,8 @@ h3.timeline-title {
   color: #6c757d!important;
   font-family: inherit;
   position: absolute;
-  left: 125px;
-  top: 70px;
+  left: 25%;
+  top: 30%;
 }
 
 .m-b-30 {
