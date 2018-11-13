@@ -210,29 +210,71 @@
 
                         <div class="row">
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-layers float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Aanmelden lunch vrijdagmiddag</h6>
-                                    <h2 class="m-b-20" data-plugin="counterup">97</h2><h6>Dagen</h6>
-                                    
+                                <div class="card-box vrijdagMiddagLunch" id="vrijmilunch">
+                                    <h4 class="aanmeld-titel">Vrijdagmiddag lunch</h4>
+                                    <button class="aanwezig" id="meld_aan">Meld mij aanwezig</button>
+                                    <a href="JavaScript:Void(0)" class="afwezig" id="meld_af">Ik kan er niet zijn</a>
+                                    <script>
+                                        document.getElementById('meld_aan').onclick = function() {
+                                            document.getElementById('vrijmilunch').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Vrijdagmiddag lunch</h4>'+
+                                                '<button class="aanwezig checked" id="meld_aan">See you there!<i class="zmdi zmdi-check"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenVrijMiLunch" class="afwezig">Check de aanwezigen</a>';
+                                        }
+                                        
+                                        document.getElementById('meld_af').onclick = function() {
+                                            document.getElementById('vrijmilunch').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Vrijdagmiddag lunch</h4>'+
+                                                '<button class="aanwezig un-checked" id="meld_aan">Niet aanwezig<i class="zmdi zmdi-close"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenVrijMiLunch" class="afwezig">Wijzig je status</a>';
+                                        }
+                                    </script>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-paypal float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Aanmelden VrijMiBo</h6>
-                                    <h2 class="m-b-20">$<span data-plugin="counterup">46,782</span></h2>
-                                    <span class="badge badge-danger"> -29% </span> <span class="text-muted">From previous period</span>
+                             <div class="col-md-6 col-xl-3">
+                                <div class="card-box vrijdagMiddagLunch" id="vrijmiborrel">
+                                    <h4 class="aanmeld-titel">Vrijdagmiddag borrel</h4>
+                                    <button class="aanwezig" id="meld_aan_borrel">Meld mij aanwezig</button>
+                                    <a href="JavaScript:Void(0)" class="afwezig" id="meld_af_borrel">Ik kan er niet zijn</a>
+                                    <script>
+                                        document.getElementById('meld_aan_borrel').onclick = function() {
+                                            document.getElementById('vrijmiborrel').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Vrijdagmiddag borrel</h4>'+
+                                                '<button class="aanwezig checked" id="meld_aan">See you there!<i class="zmdi zmdi-check"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenVrijMiBo" class="afwezig">Check de aanwezigen</a>';
+                                        }
+                                        
+                                        document.getElementById('meld_af_borrel').onclick = function() {
+                                            document.getElementById('vrijmiborrel').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Vrijdagmiddag borrel</h4>'+
+                                                '<button class="aanwezig un-checked" id="meld_aan">Niet aanwezig<i class="zmdi zmdi-close"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenVrijMiBo" class="afwezig">Wijzig je status</a>';
+                                        }
+                                    </script>
                                 </div>
                             </div>
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-chart float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Aanmelden Pippledag</h6>
-                                    <h2 class="m-b-20">$<span data-plugin="counterup">15.9</span></h2>
-                                    <span class="badge badge-pink"> 0% </span> <span class="text-muted">From previous period</span>
+                            
+                             <div class="col-md-6 col-xl-3">
+                                <div class="card-box vrijdagMiddagLunch" id="pippledag">
+                                    <h4 class="aanmeld-titel">Pipple dag</h4>
+                                    <button class="aanwezig" id="meld_aan_pipple">Meld mij aanwezig</button>
+                                    <a href="JavaScript:Void(0)" class="afwezig" id="meld_af_pipple">Ik kan er niet zijn</a>
+                                    <script>
+                                        document.getElementById('meld_aan_pipple').onclick = function() {
+                                            document.getElementById('pippledag').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Pipple dag</h4>'+
+                                                '<button class="aanwezig checked" id="meld_aan">See you there!<i class="zmdi zmdi-check"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenPippleDag" class="afwezig">Check de aanwezigen</a>';
+                                        }
+                                        
+                                        document.getElementById('meld_af_pipple').onclick = function() {
+                                            document.getElementById('pippledag').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Pipple dag</h4>'+
+                                                '<button class="aanwezig un-checked" id="meld_aan">Niet aanwezig<i class="zmdi zmdi-close"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenPippleDag" class="afwezig">Wijzig je status</a>';
+                                        }
+                                    </script>
                                 </div>
                             </div>
 
@@ -654,6 +696,9 @@
 
         <!-- Page specific js -->
         <script src="assets/pages/jquery.dashboard.js"></script>
+        
+        <!-- Global js -->
+        <script src="assets/js/global.js"></script>
 
     </body>
 </html>

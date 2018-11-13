@@ -24834,3 +24834,74 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
   content: "\e67f";
 }
 /*# sourceMappingURL=style.css.map */
+
+/*CSS door Matthew Kouwenberg*/
+
+.vrijdagMiddagLunch{
+    height: 162px;
+}
+
+.card-box .aanmeld-titel{
+    text-align: center;
+}
+
+.card-box .aanwezig{
+    padding: 10px 20px;
+    background: #1d79b3;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 10px;
+    border-radius: 5px;
+    border: none;
+}
+.card-box .aanwezig i{
+    vertical-align: middle;
+    padding: 0 0 0 5px;
+}
+.card-box .aanwezig.checked{
+    background: #00bd97;
+    opacity: .75;
+    cursor: auto;
+    transition: 1s ease-in;
+}
+.card-box .aanwezig.un-checked{
+    background: #ff4d3b;
+    opacity: .75;
+    cursor: auto;
+}
+.card-box .afwezig{
+    text-align: center;
+    display: block;
+}
+
+.aanwezigheidLijst{
+    padding: 0;
+    width: 100%;
+    margin: 20px auto;
+}
+.aanwezigheidLijst li{
+    display: block;
+    list-style: none;
+    padding: 10px 20px;
+    background: #f9f9f9;
+}
+.aanwezigheidLijst li .zmdi-check{
+    color: #00bd97;
+}
+.aanwezigheidLijst li .zmdi-close{
+    color: #ff4d3b;
+}
+.aanwezigheidLijst li:nth-child(even){
+    background: #fff;
+}
+.aanwezigheidLijst span{
+    float: right;
+}
+.aanwezigheidLijst #voorbeeld1, .aanwezigheidLijst #voorbeeld2, .aanwezigheidLijst #voorbeeld3{
+    display: none;
+}
+.aanwezigheid h5{
+    text-align: center;
+}
