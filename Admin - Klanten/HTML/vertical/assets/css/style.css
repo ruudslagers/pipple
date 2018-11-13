@@ -3040,6 +3040,27 @@ h3.timeline-title {
   margin-bottom: 20px !important;
 }
 
+ .pippelaarsh6 h6 { 
+ position: absolute;
+  left: 25%;
+  top: 15%;
+}
+
+.persoonlijk-stukje {
+  font-size: 0.9rem;
+  color: #6c757d!important;
+  font-family: inherit;
+  position: absolute;
+  left: 25%;
+  top: 30%;
+}
+
+.card-box img { 
+height: 5%;
+width:12%;
+}
+
+
 .m-b-30 {
   margin-bottom: 30px !important;
 }
