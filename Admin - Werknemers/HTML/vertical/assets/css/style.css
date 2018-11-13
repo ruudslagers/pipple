@@ -23,6 +23,18 @@ logo-pipple {
     height: 500px;
 }
 
+.nieuwsartikelen .column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .page-title-box {
   background-color: #ffffff;
   margin: -20px -20px 20px -20px;
