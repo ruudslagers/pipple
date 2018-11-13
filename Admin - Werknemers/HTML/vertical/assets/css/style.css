@@ -3083,8 +3083,8 @@ h3.timeline-title {
 
 .pippelaarsh6 h6 { 
  position: absolute;
-  left: 125px;
-  top: 40px;
+  left: 25%;
+  top: 15%;
 }
 
 .persoonlijk-stukje {
@@ -3092,8 +3092,8 @@ h3.timeline-title {
   color: #6c757d!important;
   font-family: inherit;
   position: absolute;
-  left: 125px;
-  top: 70px;
+  left: 25%;
+  top: 30%;
 }
 
 .m-b-30 {
