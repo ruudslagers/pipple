@@ -24920,3 +24920,58 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
 .aanwezigheid h5{
     text-align: center;
 }
+
+/*CSS by Ruud*/
+
+.agendaHome .blok{
+    display: inline-block;
+    padding: 10px;
+}
+.agendaHome .toDo{
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #eeeeee;
+    padding: 15px;
+    background: #fff;
+}
+.agendaHome .toDo span{
+    font-weight: 700;
+    color: #007ab8;
+    margin: 10px 0;
+}
+.agendaHome .toDo h5{
+    margin-bottom: 15px;
+}
+.agendaHome .toDo p{
+    margin: 10px 0 0;
+}
+.agendaHome .toDo ul{
+    padding-left: 0px;
+}
+.agendaHome .toDo ul li{
+    list-style: none;
+    color: #afafaf;
+}
+.agendaHome .toDo .knop{
+    margin: 10px 0;
+}
+.accordion {
+    color: #007ab8;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: 10px 0;
+    padding: 0;
+    background: none;
+}
+.accordion .zmdi-chevron-down{
+    margin: 0 5px;
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
