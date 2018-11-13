@@ -197,7 +197,7 @@
                                     <ol class="breadcrumb float-right">
                                         <li class="breadcrumb-item"><a href="#">Pipple</a></li>
                                         <li class="breadcrumb-item"><a href="#">Werknemers</a></li>
-                                        <li class="breadcrumb-item active">Dashboard</li>
+                                        <li class="breadcrumb-item active">Home</li>
                                     </ol>
 
                                     <div class="clearfix"></div>
@@ -209,38 +209,112 @@
 
                         <div class="row">
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-layers float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Aanmelden lunch vrijdagmiddag</h6>
-                                    <h2 class="m-b-20" data-plugin="counterup">97</h2><h6>Dagen</h6>
+                                <div class="card-box vrijdagMiddagLunch" id="vrijmilunch">
+                                    <h4 class="aanmeld-titel">Vrijdagmiddag lunch</h4>
+                                    <button class="aanwezig" id="meld_aan">Meld mij aanwezig</button>
+                                    <a href="JavaScript:Void(0)" class="afwezig" id="meld_af">Ik kan er niet zijn</a>
+                                    <script>
+                                        document.getElementById('meld_aan').onclick = function() {
+                                            document.getElementById('vrijmilunch').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Vrijdagmiddag lunch</h4>'+
+                                                '<button class="aanwezig checked" id="meld_aan">See you there!<i class="zmdi zmdi-check"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenVrijMiLunch" class="afwezig">Check de aanwezigen</a>';
+                                        }
+                                        
+                                        document.getElementById('meld_af').onclick = function() {
+                                            document.getElementById('vrijmilunch').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Vrijdagmiddag lunch</h4>'+
+                                                '<button class="aanwezig un-checked" id="meld_aan">Niet aanwezig<i class="zmdi zmdi-close"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenVrijMiLunch" class="afwezig">Wijzig je status</a>';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+
+                             <div class="col-md-6 col-xl-3">
+                                <div class="card-box vrijdagMiddagLunch" id="vrijmiborrel">
+                                    <h4 class="aanmeld-titel">Vrijdagmiddag borrel</h4>
+                                    <button class="aanwezig" id="meld_aan_borrel">Meld mij aanwezig</button>
+                                    <a href="JavaScript:Void(0)" class="afwezig" id="meld_af_borrel">Ik kan er niet zijn</a>
+                                    <script>
+                                        document.getElementById('meld_aan_borrel').onclick = function() {
+                                            document.getElementById('vrijmiborrel').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Vrijdagmiddag borrel</h4>'+
+                                                '<button class="aanwezig checked" id="meld_aan">See you there!<i class="zmdi zmdi-check"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenVrijMiBo" class="afwezig">Check de aanwezigen</a>';
+                                        }
+                                        
+                                        document.getElementById('meld_af_borrel').onclick = function() {
+                                            document.getElementById('vrijmiborrel').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Vrijdagmiddag borrel</h4>'+
+                                                '<button class="aanwezig un-checked" id="meld_aan">Niet aanwezig<i class="zmdi zmdi-close"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenVrijMiBo" class="afwezig">Wijzig je status</a>';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            
+                             <div class="col-md-6 col-xl-3">
+                                <div class="card-box vrijdagMiddagLunch" id="pippledag">
+                                    <h4 class="aanmeld-titel">Pipple dag</h4>
+                                    <button class="aanwezig" id="meld_aan_pipple">Meld mij aanwezig</button>
+                                    <a href="JavaScript:Void(0)" class="afwezig" id="meld_af_pipple">Ik kan er niet zijn</a>
+                                    <script>
+                                        document.getElementById('meld_aan_pipple').onclick = function() {
+                                            document.getElementById('pippledag').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Pipple dag</h4>'+
+                                                '<button class="aanwezig checked" id="meld_aan">See you there!<i class="zmdi zmdi-check"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenPippleDag" class="afwezig">Check de aanwezigen</a>';
+                                        }
+                                        
+                                        document.getElementById('meld_af_pipple').onclick = function() {
+                                            document.getElementById('pippledag').innerHTML = 
+                                                '<h4 class="aanmeld-titel">Pipple dag</h4>'+
+                                                '<button class="aanwezig un-checked" id="meld_aan">Niet aanwezig<i class="zmdi zmdi-close"></i></button>'+
+                                                '<a href="agenda.html#aanwezigenPippleDag" class="afwezig">Wijzig je status</a>';
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card-box vrijdagMiddagLunch" id="wintersport">
+                                    <h4 class="aanmeld-titel">Wintersport</h4>
                                     
-                                </div>
-                            </div>
+                                    <div class="ex-page-content count-down-page">
+                                        <div class="container">
 
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-paypal float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Aanmelden VrijMiBo</h6>
-                                    <h2 class="m-b-20">$<span data-plugin="counterup">46,782</span></h2>
-                                    <span class="badge badge-danger"> -29% </span> <span class="text-muted">From previous period</span>
-                                </div>
-                            </div>
 
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-chart float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Aanmelden Pippledag</h6>
-                                    <h2 class="m-b-20">$<span data-plugin="counterup">15.9</span></h2>
-                                    <span class="badge badge-pink"> 0% </span> <span class="text-muted">From previous period</span>
-                                </div>
-                            </div>
+                                            <div class="clearfix"></div>
 
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-rocket float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Countdown wintersport</h6>
-                                    <h2 class="m-b-20" data-plugin="counterup">1,890</h2>
-                                    <span class="badge badge-warning"> +89% </span> <span class="text-muted">Last year</span>
+
+                                            <div class="row justify-content-center">
+                                                <div class="col-10">
+                                                    <div id="count-down" class="row center-block">
+                                                        <div class="clock-presenter days_dash col-sm-4">
+                                                            <div class="digit"></div>
+                                                            <div class="digit"></div>
+                                                            <p class='note dash_title'>Dagen</p>
+                                                        </div>
+                                                        <div class="clock-presenter hours_dash col-sm-4">
+                                                            <div class="digit"></div>
+                                                            <div class="digit"></div>
+                                                            <p class='note dash_title'>Uren</p>
+                                                        </div>
+                                                        <div class="clock-presenter minutes_dash col-sm-4">
+                                                            <div class="digit"></div>
+                                                            <div class="digit"></div>
+                                                            <p class='note dash_title'>Minuten</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
@@ -265,8 +339,12 @@
                                                 <p class="card-text">   Stationsplein 45 A4.004<br> 
                                                                         3013AK Rotterdam <br> 
                                                                         The Netherlands</p>
-                                                <a href="#" class="card-link">Geef notificatie</a>
-                                                <a href="#" class="card-link">Negeer</a>
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-custom waves-effect waves-light btn-sm" id="sa-success">Notificaties</button>
+                                            </td>
+                                        </tr>
+                                                <a href="#" class="card-link" style="margin-left: 5px;">Negeer</a>
                                             </div>
                                         </div>
                                         
@@ -279,8 +357,12 @@
                                             </div>
                                             <div class="card-body">
                                                 <p class="card-text">   De maandelijkse Pipple dag wordt donderdag 6 december geviert bij de Petra kerk.</p>
-                                                <a href="#" class="card-link">Geef notificatie</a>
-                                                <a href="#" class="card-link">Negeer</a>
+                                                <tr>
+                                            <td>
+                                                <button class="btn btn-custom waves-effect waves-light btn-sm" id="sa-success">Notificaties</button>
+                                            </td>
+                                        </tr>
+                                                <a href="#" class="card-link" style="margin-left: 5px;">Negeer</a>
                                             </div>
                                         </div>
                                         </div>
@@ -350,6 +432,7 @@
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="card-box" style="height: 340px;">
+                                        <h4 class="header-title m-t-0 m-b-20">Nieuws artikelen</h4>
                                         <h4 class="header-title m-t-0 m-b-20">Nieuwsartikelen</h4>
                                             <div class="nieuwsartikel">
                                                     <div class="row">
@@ -540,7 +623,6 @@
         </div>
         <!-- END wrapper -->
 
-
         <script>
             var resizefunc = [];
         </script>
@@ -557,6 +639,32 @@
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/plugins/switchery/switchery.min.js"></script>
 
+        <!-- Count down js -->
+        <script src="assets/plugins/count-down/jquery.lwtCountdown-1.0.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                "use strict";
+                //Set your date
+                $('#count-down').countDown({
+                    targetDate: {
+                        'day': 25,
+                        'month': 1,
+                        'year': 2019,
+                        'hour': 7,
+                        'min': 7,
+                        'sec': 7
+                    },
+                    omitWeeks: true
+                });
+
+            });
+        </script>
+        
         <!--Morris Chart-->
 		<script src="assets/plugins/morris/morris.min.js"></script>
 		<script src="assets/plugins/raphael/raphael-min.js"></script>
@@ -571,6 +679,9 @@
 
         <!-- Page specific js -->
         <script src="assets/pages/jquery.dashboard.js"></script>
+        
+        <!-- Global js -->
+        <script src="assets/js/global.js"></script>
 
     </body>
 </html>
