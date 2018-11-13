@@ -291,57 +291,46 @@
 
                         <div class="row">
                             <div class="col-lg-6 col-xl-8">
-                                <div class="card-box" style="height: 340px; width: 100%;">
+                                <div class="card-box agendaHome" style="min-height: 340px; width: 100%;">
 
                                     <h4 class="header-title m-t-0 m-b-20">Agenda / TO DO</h4>
-                                    
-                                    <div class="col-sm-6 col-lg-11">
-            
-                                        <div class="kaart-1">
-                                        <div class="card m-b-20" style="width: 48%; float: left;">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Meeting Dash Tag</h5>
-                                                <h6 class="card-text" style="color: red">Over 3 dagen</h6>
+                                    <div class="col-xl-6 col-md-12 col-xs-12 blok">
+                                        <div class="toDo">
+                                            <h5>Pipple Dag</h5>
+                                            <span>24-10-2018</span>
+                                            <p>De maandelijkse Pipple dag wordt donderdag 6 december geviert bij de Petra kerk.</p>
+                                            <button class="accordion">Check het adres<i class="zmdi zmdi-chevron-down"></i></button>
+                                            <div class="panel">
+                                                <ul>
+                                                    <li>Stationsplein 45A</li>
+                                                    <li>3013AK, Rotterdam</li>
+                                                    <li>The Netherlands</li>
+                                                </ul>
                                             </div>
-                                            <div class="card-body">
-                                                <p class="card-text">   Stationsplein 45 A4.004<br> 
-                                                                        3013AK Rotterdam <br> 
-                                                                        The Netherlands</p>
-                                        <tr>
-                                            <td>
+                                            <div class="knop">
                                                 <button class="btn btn-custom waves-effect waves-light btn-sm" id="sa-success">Notificaties</button>
-                                            </td>
-                                        </tr>
                                                 <a href="#" class="card-link" style="margin-left: 5px;">Negeer</a>
                                             </div>
                                         </div>
-                                        
-                                        
-                                        
-                                        <div class="card m-b-20" style="width: 48%; float: right;">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Pipple dag</h5>
-                                                <h6 class="card-text" style="color: red">Over 16 dagen</h6>
+                                    </div><div class="col-xl-6 col-md-12 col-xs-12 blok">
+                                        <div class="toDo">
+                                            <h5>Pipple Dag</h5>
+                                            <span>24-10-2018</span>
+                                            <p>De maandelijkse Pipple dag wordt donderdag 6 december geviert bij de Petra kerk.</p>
+                                            <button class="accordion">Check het adres<i class="zmdi zmdi-chevron-down"></i></button>
+                                            <div class="panel">
+                                                <ul>
+                                                    <li>Stationsplein 45A</li>
+                                                    <li>3013AK, Rotterdam</li>
+                                                    <li>The Netherlands</li>
+                                                </ul>
                                             </div>
-                                            <div class="card-body">
-                                                <p class="card-text">   De maandelijkse Pipple dag wordt donderdag 6 december geviert bij de Petra kerk.</p>
-                                                <tr>
-                                            <td>
+                                            <div class="knop">
                                                 <button class="btn btn-custom waves-effect waves-light btn-sm" id="sa-success">Notificaties</button>
-                                            </td>
-                                        </tr>
                                                 <a href="#" class="card-link" style="margin-left: 5px;">Negeer</a>
                                             </div>
                                         </div>
-                                        </div>
-                                        
-            
-                                    </div><!-- end col -->
-                                    
-                                    
-
-                                    
-
+                                    </div>
                         		</div>
                             </div><!-- end col-->
 
@@ -558,6 +547,23 @@
 
         <script>
             var resizefunc = [];
+        </script>
+        
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
         </script>
 
         <!-- jQuery  -->
