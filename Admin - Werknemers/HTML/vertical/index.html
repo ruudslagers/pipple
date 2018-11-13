@@ -278,11 +278,43 @@
                             </div>
 
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-rocket float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Countdown wintersport</h6>
-                                    <h2 class="m-b-20" data-plugin="counterup">1,890</h2>
-                                    <span class="badge badge-warning"> +89% </span> <span class="text-muted">Last year</span>
+                                <div class="card-box vrijdagMiddagLunch" id="wintersport">
+                                    <h4 class="aanmeld-titel">Wintersport</h4>
+                                    
+                                    <div class="ex-page-content count-down-page">
+                                        <div class="container">
+
+
+                                            <div class="clearfix"></div>
+
+
+                                            <div class="row justify-content-center">
+                                                <div class="col-10">
+                                                    <div id="count-down" class="row center-block">
+                                                        <div class="clock-presenter days_dash col-sm-4">
+                                                            <div class="digit"></div>
+                                                            <div class="digit"></div>
+                                                            <p class='note dash_title'>Dagen</p>
+                                                        </div>
+                                                        <div class="clock-presenter hours_dash col-sm-4">
+                                                            <div class="digit"></div>
+                                                            <div class="digit"></div>
+                                                            <p class='note dash_title'>Uren</p>
+                                                        </div>
+                                                        <div class="clock-presenter minutes_dash col-sm-4">
+                                                            <div class="digit"></div>
+                                                            <div class="digit"></div>
+                                                            <p class='note dash_title'>Minuten</p>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
@@ -400,6 +432,7 @@
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="card-box" style="height: 340px;">
+                                        <h4 class="header-title m-t-0 m-b-20">Nieuws artikelen</h4>
                                         <h4 class="header-title m-t-0 m-b-20">Nieuwsartikelen</h4>
                                             <div class="nieuwsartikel">
                                                     <div class="row">
@@ -590,7 +623,6 @@
         </div>
         <!-- END wrapper -->
 
-
         <script>
             var resizefunc = [];
         </script>
@@ -607,6 +639,32 @@
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/plugins/switchery/switchery.min.js"></script>
 
+        <!-- Count down js -->
+        <script src="assets/plugins/count-down/jquery.lwtCountdown-1.0.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                "use strict";
+                //Set your date
+                $('#count-down').countDown({
+                    targetDate: {
+                        'day': 25,
+                        'month': 1,
+                        'year': 2019,
+                        'hour': 7,
+                        'min': 7,
+                        'sec': 7
+                    },
+                    omitWeeks: true
+                });
+
+            });
+        </script>
+        
         <!--Morris Chart-->
 		<script src="assets/plugins/morris/morris.min.js"></script>
 		<script src="assets/plugins/raphael/raphael-min.js"></script>
