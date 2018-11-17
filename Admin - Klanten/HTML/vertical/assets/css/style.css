@@ -3046,6 +3046,33 @@ h3.timeline-title {
   top: 15%;
 }
 
+.contactpersoonh6 h6{
+  position: absolute;
+  left: 28%;
+  top: 30%;
+  font-size: 0.85rem;
+  margin-bottom: 0px;
+}
+
+.contactpersoon h6 {
+  margin-bottom: 8px !important
+}
+
+.infopippelaar{
+  position: absolute;
+  left:28%;
+  top:45%;
+}
+
+.vrijdagmiddaglunch { 
+height: 162px
+ }
+
+ .card-box .contactpersoon img {
+    width: 17%;
+    position: relative;
+}
+
 .persoonlijk-stukje {
   font-size: 0.9rem;
   color: #6c757d!important;
