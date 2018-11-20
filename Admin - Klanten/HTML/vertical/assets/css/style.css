@@ -24963,12 +24963,17 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
     text-align: center;
     height: 80px;
     position: relative;
-    width: 100px;
+    width: 70px;
     z-index: 1;
 }
 @media only screen and (min-device-width: 850px){
     .topbar .topbar-left .logo-klein {
         line-height: 70px;
+        display: none;
+    }
+}
+@media only screen and (max-width: 850px){
+    .logo-groot{
         display: none;
     }
 }
