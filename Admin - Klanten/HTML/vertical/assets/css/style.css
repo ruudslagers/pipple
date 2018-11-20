@@ -3054,37 +3054,9 @@ h3.timeline-title {
   margin-bottom: 20px !important;
 }
 
- .pippelaarsh6 h6 { 
- position: absolute;
-  left: 25%;
-  top: 15%;
-}
-
-.contactpersoonh6 h6{
-  position: absolute;
-  left: 28%;
-  top: 30%;
-  font-size: 0.85rem;
-  margin-bottom: 0px;
-}
-
-.contactpersoon h6 {
-  margin-bottom: 8px !important
-}
-
-.infopippelaar{
-  position: absolute;
-  left:28%;
-  top:45%;
-}
-
-.vrijdagmiddaglunch { 
-height: 162px
- }
-
- .card-box .contactpersoon img {
-    width: 17%;
-    position: relative;
+.card-box img { 
+height: 5%;
+width:12%;
 }
 
 .persoonlijk-stukje {
@@ -3096,11 +3068,47 @@ height: 162px
   top: 30%;
 }
 
-.card-box img { 
-height: 5%;
-width:12%;
+ .pippelaarsh6 h6 { 
+ position: absolute;
+  left: 25%;
+  top: 15%;
 }
 
+.contactpersoonh6 h6{
+  font-size: 0.85rem;
+  margin-bottom: 0px;
+}
+
+.contactpersoon h6 {
+  margin-bottom: 8px !important
+}
+
+.contactpersoonimg img {
+    width: 100%;
+    position: relative;
+}
+
+.persoonlijk-stukje {
+  font-size: 0.9rem;
+  color: #6c757d!important;
+  font-family: inherit;
+}
+
+.contactpersoon {
+  display: inline-block;
+  width: 78%;
+  vertical-align: top;
+  padding-left: 6%;
+}
+
+.contactpersoonimg {
+  display: inline-block;
+  width: 20%
+}
+
+.contactpersoon h6 {
+  margin-bottom: 0px !important;
+}
 
 .m-b-30 {
   margin-bottom: 30px !important;
