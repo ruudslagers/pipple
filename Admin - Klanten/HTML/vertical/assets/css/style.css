@@ -3092,6 +3092,16 @@ h3.timeline-title {
     padding: 5px;
 }
 
+.contactpersoon ul li i{
+ color: #002f65;
+margin-right: 10px;
+}
+
+.contactpersoon ul li:first-child{
+  font-weight: 700;
+    text-transform: uppercase;
+}
+
 .contactpersoon ul li:nth-child(even){
     background: #fafafa;
 }
