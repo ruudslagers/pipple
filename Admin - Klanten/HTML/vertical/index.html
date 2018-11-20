@@ -213,16 +213,27 @@
                                     
                                 </div>
                             </div>
-
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-paypal float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Aanmelden VrijMiBo</h6>
-                                    <h2 class="m-b-20">$<span data-plugin="counterup">46,782</span></h2>
-                                    <span class="badge badge-danger"> -29% </span> <span class="text-muted">From previous period</span>
+                                <div class="card-box vrijdagMiddagLunch" id="vrijmiborrel">
+                                <h4 class="aanmeld-titel">Events</h4>
+                                    <div class="col-md-12 event">
+                                        Titel van het event<span>13 november</span>
+                                        <button class="accordion"><i class="zmdi zmdi-chevron-down"></i></button>
+                                        <div class="panel">
+                                            <p>tekst met de introductie van het event content bla tekst enzo neefje</p>
+                                            <div class="locatie"><b>Locatie:</b> Rondsolweg 45A, Almere</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 event">
+                                        Titel van het event<span>13 november</span>
+                                        <button class="accordion"><i class="zmdi zmdi-chevron-down"></i></button>
+                                        <div class="panel">
+                                            <p>tekst met de introductie van het event content bla tekst enzo neefje</p>
+                                            <div class="locatie"><b>Locatie:</b> Rondsolweg 45A, Almere</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
                             <div class="col-md-6 col-xl-3">
                                 <div class="card-box tilebox-one">
                                     <i class="icon-chart float-right text-muted"></i>
@@ -233,11 +244,8 @@
                             </div>
 
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-rocket float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Countdown wintersport</h6>
-                                    <h2 class="m-b-20" data-plugin="counterup">1,890</h2>
-                                    <span class="badge badge-warning"> +89% </span> <span class="text-muted">Last year</span>
+                                <div class="card-box vrijdagMiddagLunch" id="wintersport">
+                                    <h4 class="aanmeld-titel">Contactpersoon</h4>
                                 </div>
                             </div>
                         </div>
@@ -272,31 +280,18 @@
                             <div class="col-lg-6 col-xl-4">
                                 <div class="card-box">
 
-                                    <h4 class="header-title m-t-0 m-b-30">Pipple Flash</h4>
+                                    <h4 class="header-title m-t-0 m-b-30">Weer</h4>
 
-                                    <div class="text-center m-b-20">
-                                        <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-sm btn-secondary">Today</button>
-                                            <button type="button" class="btn btn-sm btn-secondary">This Week</button>
-                                            <button type="button" class="btn btn-sm btn-secondary">Last Week</button>
-                                        </div>
+                                    <div>
+                                    
+                                    <a class="weatherwidget-io" href="https://forecast7.com/nl/51d445d47/eindhoven/" data-label_1="EINDHOVEN" data-label_2="Weer" data-icons="Climacons Animated" data-theme="pure" data-highcolor="#484747" data-lowcolor="rgba(157, 40, 40, 0)" >EINDHOVEN Weer</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+                                        
                                     </div>
 
-                                    <div id="morris-donut-example" style="height: 265px;"></div>
-
-                                    <div class="text-center">
-                                        <ul class="list-inline chart-detail-list mb-0 m-t-10">
-                                            <li class="list-inline-item">
-                                                <h6 style="color: #3db9dc;"><i class="zmdi zmdi-circle-o m-r-5"></i>English</h6>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <h6 style="color: #1bb99a;"><i class="zmdi zmdi-triangle-up m-r-5"></i>Italian</h6>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <h6 style="color: #818a91;"><i class="zmdi zmdi-square-o m-r-5"></i>French</h6>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    
 
                         		</div>
                             </div><!-- end col-->
@@ -622,6 +617,23 @@
 
         <script>
             var resizefunc = [];
+        </script>
+        
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
         </script>
 
         <!-- jQuery  -->
