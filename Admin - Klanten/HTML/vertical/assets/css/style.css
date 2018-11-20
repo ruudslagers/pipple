@@ -4591,6 +4591,10 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
   font-size: 30px;
 }
 
+.voortgang {
+    min-height: 180px;
+}
+
 .tilebox-two i {
   font-size: 48px;
   opacity: 0.2;
@@ -4662,6 +4666,16 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
   overflow: hidden;
   padding: 15px 0;
   position: relative;
+}
+
+.link {
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+
+.project-link {
+    color: #99d4fc;
 }
 
 .inbox-widget .inbox-item .inbox-item-img {
