@@ -8,7 +8,7 @@
         <meta name="author" content="Pipple">
 
         <!-- App Favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="assets/logo/favicon.ico">
 
         <!-- App title -->
         <title>Pipple Webapp - Data Science With Purpose</title>
@@ -40,9 +40,12 @@
             <div class="topbar">
 
                 <!-- LOGO -->
-                <div class="topbar-left">
-                    <a href="index.html" class="logo">
-                    	<img src="assets/logo/Pipple-Logo.png" alt="Logo Pipple" style="width: 120px;">
+                 <div class="topbar-left">
+                    <a href="index.html" class="logo-klein">
+                        <img src="assets/logo/favicon.png">
+                    </a>
+                    <a href="index.html" class="logo-groot">
+                        <img src="assets/logo/Pipple-Logo-small.png">
                     </a>
                 </div>
 
@@ -117,12 +120,6 @@
                             <button class="button-menu-mobile open-left waves-light waves-effect">
                                 <i class="zmdi zmdi-menu"></i>
                             </button>
-                        </li>
-                        <li class="hidden-mobile app-search">
-                            <form role="search" class="">
-                                <input type="text" placeholder="Zoeken..." class="form-control">
-                                <a href=""><i class="fa fa-search"></i></a>
-                            </form>
                         </li>
                     </ul>
 
@@ -213,16 +210,27 @@
                                     
                                 </div>
                             </div>
-
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="icon-paypal float-right text-muted"></i>
-                                    <h6 class="text-muted text-uppercase m-b-20">Aanmelden VrijMiBo</h6>
-                                    <h2 class="m-b-20">$<span data-plugin="counterup">46,782</span></h2>
-                                    <span class="badge badge-danger"> -29% </span> <span class="text-muted">From previous period</span>
+                                <div class="card-box vrijdagMiddagLunch" id="vrijmiborrel">
+                                <h4 class="aanmeld-titel">Events</h4>
+                                    <div class="col-md-12 event">
+                                        Titel van het event<span>13 november</span>
+                                        <button class="accordion"><i class="zmdi zmdi-chevron-down"></i></button>
+                                        <div class="panel">
+                                            <p>tekst met de introductie van het event content bla tekst enzo neefje</p>
+                                            <div class="locatie"><b>Locatie:</b> Rondsolweg 45A, Almere</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 event">
+                                        Titel van het event<span>13 november</span>
+                                        <button class="accordion"><i class="zmdi zmdi-chevron-down"></i></button>
+                                        <div class="panel">
+                                            <p>tekst met de introductie van het event content bla tekst enzo neefje</p>
+                                            <div class="locatie"><b>Locatie:</b> Rondsolweg 45A, Almere</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
                             <div class="col-md-6 col-xl-3">
                                 <div class="card-box tilebox-one voortgang">
                                     <h4 class="aanmeld-titel">Voortgang</h4>
@@ -240,7 +248,16 @@
 
                             <div class="col-md-6 col-xl-3">
                                 <div class="card-box vrijdagMiddagLunch" id="wintersport">
-                                    <h4 class="aanmeld-titel">Contactpersoon</h4>
+                                    <div class="contactpersoon">
+                                        <h6 class="text-muted text-uppercase m-b-20">Contactpersoon</h6>
+                                    </div>
+                                        <div class="contactpersoon">
+                                            <img src="assets/images/pippelaars/bas.png" >
+                                        </div>
+                                     <div class="contactpersoonh6">
+                                        <h6 class="text-muted text-uppercase m-b-20">Bas Caron</h6>
+                                    </div>
+                                    <p class="infopippelaar">Functie : <br>Specialisatie : <br>E-mail : <a href="mailto:bas@pipple.nl"> bas@pipple.nl</a></br></br> </p>                                    
                                 </div>
                             </div>
                         </div>
@@ -607,6 +624,23 @@
 
         <script>
             var resizefunc = [];
+        </script>
+        
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
         </script>
 
         <!-- jQuery  -->
