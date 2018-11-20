@@ -3081,6 +3081,25 @@ h3.timeline-title {
   padding-left: 6%;
 }
 
+.contactpersoon ul{
+  padding-left: 0px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.contactpersoon ul li{
+  list-style: none;
+    padding: 5px;
+}
+
+.contactpersoon ul li:nth-child(even){
+    background: #fafafa;
+}
+
+.contactpersoon ul li span{
+  float: right;
+}
+
 .contactpersoonimg {
   display: inline-block;
   width: 20%
