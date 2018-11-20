@@ -24814,3 +24814,83 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
   content: "\e67f";
 }
 /*# sourceMappingURL=style.css.map */
+
+
+
+.card-box .aanmeld-titel{
+    text-align: center;
+}
+
+.card-box .aanwezig{
+    padding: 10px 20px;
+    background: #1d79b3;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 10px;
+    border-radius: 5px;
+    border: none;
+}
+.card-box .aanwezig i{
+    vertical-align: middle;
+    padding: 0 0 0 5px;
+}
+.card-box .aanwezig.checked{
+    background: #00bd97;
+    opacity: .75;
+    cursor: auto;
+    transition: 1s ease-in;
+}
+.card-box .aanwezig.un-checked{
+    background: #ff4d3b;
+    opacity: .75;
+    cursor: auto;
+}
+.card-box .afwezig{
+    text-align: center;
+    display: block;
+}
+.event{
+    background: #fff;
+    border: 1px solid #eeeeee;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+.event span{
+    font-weight: 700;
+    color: #007ab8;
+    margin-left: 10px;
+    opacity: .5;
+    font-size: 12px;
+}
+.event .accordion{
+    position: absolute;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.4s;
+}
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel p{
+    margin: 10px 0;
+    color: #808080;
+}
+
+.panel .locatie{
+    font-weight: 700;
+    color: #007ab8;
+    opacity: .5;
+    font-size: 12px;
+}
