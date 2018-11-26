@@ -90,6 +90,19 @@ text-decoration: none !important;
 color: #99d4fc;
 }
 
+.coolblue a {
+  outline: none !important;
+text-decoration: none !important;
+color: #ff6600;
+}
+
+.philips a {
+  outline: none !important;
+text-decoration: none !important;
+color: #176498;
+}
+
+}
 .row {
   margin-right: -10px;
   margin-left: -10px;
@@ -107,6 +120,15 @@ color: #99d4fc;
 .bg-success {
   background-color: #1bb99a !important;
 }
+
+.coolblue .bg-success {
+  background-color: #ff6600 !important;
+}
+
+.philips .bg-success {
+  background-color: #176498 !important;
+}
+
 
 .bg-info {
   background-color: #3db9dc !important;
@@ -305,7 +327,51 @@ color: #99d4fc;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
+.philips .navbar-custom {
+    background-color: #1c70b9;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0 10px;
+    margin-left: 250px;
+    min-height: 70px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom-coolblue {
+    background-color: #0090e3;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0 10px;
+    margin-left: 250px;
+    min-height: 70px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.logo-philips { 
+  display: inline-block;
+    position: absolute;
+    height: auto;
+    width: 15%;
+    left: 52%;
+    top: -11%;}
+
+.logo-coolblue { 
+    display: inline-block;
+    position: absolute;
+    height: auto;
+    width: 14%;
+    left: 52%;
+    top: -18%;}
+
 .navbar-custom .nav-link {
+  padding: 0;
+  line-height: 70px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-custom-coolblue .nav-link {
   padding: 0;
   line-height: 70px;
   color: rgba(255, 255, 255, 0.6);
@@ -315,7 +381,15 @@ color: #99d4fc;
   content: initial;
 }
 
+.navbar-custom-coolblue .dropdown-toggle:after {
+  content: initial;
+}
+
 .navbar-custom .menu-left {
+  overflow: hidden;
+}
+
+.navbar-custom-coolblue .menu-left {
   overflow: hidden;
 }
 
@@ -1119,6 +1193,14 @@ body.fixed-left-void {
 
 .text-success {
   color: #1bb99a !important;
+}
+
+.coolblue .text-success{
+  color: #ff6600 !important;
+}
+
+.philips .text-success{
+  color: #176498 !important;
 }
 
 .text-info {
@@ -4725,6 +4807,14 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
 
 .project-link {
     color: #99d4fc;
+}
+
+.coolblue .project-link {
+    color: #ff6600;
+}
+
+.philips .project-link {
+    color: #176498;
 }
 
 .inbox-widget .inbox-item .inbox-item-img {
@@ -24929,6 +25019,23 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
     opacity: .5;
     font-size: 12px;
 }
+
+.coolblue .event span{
+    font-weight: 700;
+    color: #ff6600;
+    margin-left: 10px;
+    opacity: .5;
+    font-size: 12px;
+}
+
+.philips .event span{
+    font-weight: 700;
+    color: #176498;
+    margin-left: 10px;
+    opacity: .5;
+    font-size: 12px;
+}
+
 .event .accordion{
     position: absolute;
     right: 20px;
