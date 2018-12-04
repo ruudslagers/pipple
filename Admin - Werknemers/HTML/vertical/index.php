@@ -43,10 +43,10 @@
 
                 <!-- LOGO -->
                 <div class="topbar-left">
-                    <a href="index.html" class="logo-klein">
+                    <a href="" class="logo-klein">
                         <img src="assets/logo/favicon.png">
                     </a>
-                    <a href="index.html" class="logo-groot">
+                    <a href="" class="logo-groot">
                         <img src="assets/logo/Pipple-Logo-small.png">
                     </a>
                 </div>
@@ -146,7 +146,7 @@
                             </li>
                             
                             <li class="has_sub">
-                                <a href="agenda.html" class="waves-effect"><span class="badge badge-pill badge-primary float-right"></span><i class="zmdi zmdi-calendar"></i><span> Agenda </span> </a>
+                                <a href="agenda.php" class="waves-effect"><span class="badge badge-pill badge-primary float-right"></span><i class="zmdi zmdi-calendar"></i><span> Agenda </span> </a>
                             </li>    
 
                             <li class="has_sub">
@@ -215,14 +215,14 @@
                                             document.getElementById('vrijmilunch').innerHTML = 
                                                 '<h4 class="aanmeld-titel">Vrijdagmiddag lunch</h4>'+
                                                 '<button class="aanwezig checked" id="meld_aan">See you there!<i class="zmdi zmdi-check"></i></button>'+
-                                                '<a href="agenda.html#aanwezigenVrijMiLunch" class="afwezig">Check de aanwezigen</a>';
+                                                '<a href="agenda.php#aanwezigenVrijMiLunch" class="afwezig">Check de aanwezigen</a>';
                                         }
                                         
                                         document.getElementById('meld_af').onclick = function() {
                                             document.getElementById('vrijmilunch').innerHTML = 
                                                 '<h4 class="aanmeld-titel">Vrijdagmiddag lunch</h4>'+
                                                 '<button class="aanwezig un-checked" id="meld_aan">Niet aanwezig<i class="zmdi zmdi-close"></i></button>'+
-                                                '<a href="agenda.html#aanwezigenVrijMiLunch" class="afwezig">Wijzig je status</a>';
+                                                '<a href="agenda.php#aanwezigenVrijMiLunch" class="afwezig">Wijzig je status</a>';
                                         }
                                     </script>
                                 </div>
@@ -232,45 +232,83 @@
                                 <div class="card-box vrijdagMiddagLunch" id="vrijmiborrel">
                                     <h4 class="aanmeld-titel">Vrijdagmiddag borrel</h4>
                                     
-                                    <form action="" method="post">
-	                                    <input name="aanwezig" type="submit" class="aanwezig" value="Meld mij aanwezig">
-                                    </form>
-                                    
-<!--
-                                    
-                                    <button class="aanwezig">Meld mij aanwezig</button>
-                                    <a href="#" class="afwezig">Ik kan er niet zijn</a>
--->
-                                    
-                                    <?php
-	                                
-	                               include 'assets/db/connection.php';
+                                    <?PHP 
+	                                    
+	                                include 'assets/db/connection.php';
 
 
 									$name = 'Matthew Kouwenberg';
-									$mail = 'matthew@pipple.nl';
+	                                $mail = 'matthew@pipple.nl';
 																		
 									
 									$exists = $conn->query("SELECT id FROM vrijmibo WHERE email = '$mail'");
-									$aanwezig = "INSERT INTO vrijmibo (naam, email, status) VALUES ('$name', '$mail', 'aanwezig')";
+									
+									if(mysqli_num_rows($exists) == 0) {
+	                                    
+                                    ?>
+                                    
+									<!-- Gebruiker nog niet aanwezig -->
+                                    <form action="" method="post">
+	                                    <input name="aanwezig" type="submit" class="aanwezig" value="Meld mij aanwezig">
+                                    </form>
+                                    <form action="" method="post">
+	                                    <input name="afwezig" type="submit" class="afwezig" value="Ik kan er niet zijn">
+                                    </form>
+                                    
+                                    <?php
+	                                } else{
+									
+// 									Check of de gebruiker op aanwezig of afwezig staat zodat je weet welke opties je moet echoën 
+									
+									$naam = "SELECT `naam`, `status` FROM `vrijmibo` WHERE email = '$mail'";
+									$result = $conn->query($naam);
+									
+									if ($result->num_rows > 0) {
+									    // output data of each row
+									    while($row = $result->fetch_assoc()) {
+										    
+										    if ($row["status"] == 'Afwezig' OR $row["status"] == 'afwezig'){?>
+											    <button class="aanwezig un-checked" id="meld_aan">Niet aanwezig<i class="zmdi zmdi-close"></i></button>
+                                                <a href="agenda.php#aanwezigenVrijMiLunch" class="afwezig">Wijzig je status</a>
+										    <?php }else{ ?>
+											    <!-- Gebruiker is al aanwezig -->
+												<button class="aanwezig checked" id="meld_aan">See you there!<i class="zmdi zmdi-check"></i></button>
+			                                    <a href="agenda.php#aanwezigenPippleDag" class="afwezig">Check de aanwezigen</a>
+										    <?php }
+										    										    
+										    
+									    }
+									}
+		                                
+	                                }
+									
+
+// 									Verversen van de browser als de gebruiker een optie heeft gekozen
 
 									if(isset($_POST['aanwezig'])){
 										
+										$aanwezig = "INSERT INTO vrijmibo (naam, email, status) VALUES ('$name', '$mail', 'aanwezig')";
 									    if(mysqli_num_rows($exists) == 0) {
 										    
 									    	if ($conn->query($aanwezig) === TRUE) {
-										    	echo "New record created successfully";
-										    	$conn->close();
+										    	echo "<script>window.location = ''</script>";
 											} 
-											
-										}
-										else{
-											
-											echo "<a href='' class='afwezig'>Gebruiker staat al in DB</a>";
 											
 										}
 
 									}
+									
+									elseif(isset($_POST['afwezig'])){
+		                                
+		                                
+		                                $update = "INSERT INTO vrijmibo (naam, email, status) VALUES ('$name', '$mail', 'afwezig')";
+		                                if ($conn->query($update) === TRUE) {
+											echo "<script>window.location = ''</script>";
+										} 
+		                                
+		                                
+		                            }    
+
 
 									
 	                                    
@@ -293,14 +331,14 @@
                                             document.getElementById('pippledag').innerHTML = 
                                                 '<h4 class="aanmeld-titel">Pipple dag</h4>'+
                                                 '<button class="aanwezig checked" id="meld_aan">See you there!<i class="zmdi zmdi-check"></i></button>'+
-                                                '<a href="agenda.html#aanwezigenPippleDag" class="afwezig">Check de aanwezigen</a>';
+                                                '<a href="agenda.php#aanwezigenPippleDag" class="afwezig">Check de aanwezigen</a>';
                                         }
                                         
                                         document.getElementById('meld_af_pipple').onclick = function() {
                                             document.getElementById('pippledag').innerHTML = 
                                                 '<h4 class="aanmeld-titel">Pipple dag</h4>'+
                                                 '<button class="aanwezig un-checked" id="meld_aan">Niet aanwezig<i class="zmdi zmdi-close"></i></button>'+
-                                                '<a href="agenda.html#aanwezigenPippleDag" class="afwezig">Wijzig je status</a>';
+                                                '<a href="agenda.php#aanwezigenPippleDag" class="afwezig">Wijzig je status</a>';
                                         }
                                     </script>
                                 </div>
