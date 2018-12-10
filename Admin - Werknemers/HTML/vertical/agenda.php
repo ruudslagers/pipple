@@ -408,8 +408,8 @@
                                     
                                     <?php
 	                                
-	                                $name = 'Matthew Kouwenberg';
-	                                $mail = 'matthew@pipple.nl';
+	                                $name = 'Bas Caron';
+	                                $mail = 'bas@pipple.nl';
 																		
 									$exists = $conn->query("SELECT id FROM vrijmibo WHERE email = '$mail'");
 									$aanwezigInDB = $conn->query("SELECT `naam`, `status` FROM `vrijmibo` WHERE email = '$mail' AND `status` = 'afwezig'");
@@ -431,9 +431,12 @@
 	                                    <input name="afwezig" type="submit" class="afwezig" value="Ik kan er niet zijn">
                                     </form>
                                     
-<!--                                Aanwezig melden van de gebruiker op agenda pagina -->
                                     <?php
+	                                    
+	                                    
 	                                }
+	                                
+// 	                                Aanwezig melden van de gebruiker op agenda pagina
 	                                
                                     if(isset($_POST['aanwezig'])){
 										
@@ -442,24 +445,20 @@
 										
 										
 									    if(mysqli_num_rows($exists) == 0) {
-									    	if ($conn->query($aanwezig) === TRUE) {
+									    	if ($conn->query($aanwezig) === TRUE) { // Gebruiker bestaat nog niet en wil zich aanwezig melden
 										    	echo "<script>window.location = '#aanwezigenVrijMiBo'</script>";
 											} 
 											
 										}else{
-											if ($conn->query($updateAanwezig) === TRUE) {
+											if ($conn->query($updateAanwezig) === TRUE) { // Gebruiker is aanwezig maar wilt zich afwezig melden
 										    	echo "<script>window.location = '#aanwezigenVrijMiBo'</script>";
 											} 
 										}
 
 									}
-									?>
-
+									
                                     
-                                    
-                                    
-<!--                               Update functie om de gebruiker toch nog afwezig te melden -->
-                                    <?php
+//                              	Update functie om de gebruiker toch nog afwezig te melden
 	                                
 	                                if(isset($_POST['afwezig'])){
 		                                

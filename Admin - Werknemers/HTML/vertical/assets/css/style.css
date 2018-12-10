@@ -24877,13 +24877,13 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
 }
 .card-box .aanwezig.checked{
     background: #00bd97;
-    opacity: .75;
+    opacity: .25;
     cursor: auto;
     transition: 1s ease-in;
 }
 .card-box .aanwezig.un-checked{
     background: #ff4d3b;
-    opacity: .75;
+    opacity: .25;
     cursor: auto;
 }
 .card-box .afwezig{
@@ -25009,4 +25009,20 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
     margin: 20px auto 10px;
     border-radius: 5px;
     border: none;
+}
+.nieuwsartikel a{
+	color: #007ab8;
+}
+
+.nieuwsartikel .card-box span{
+	position: absolute;
+	left: 30px;
+	top: 5px;
+	font-size: 10px;
+	color: #007ab8;
+	opacity: .4;
+}
+.card-box.artikel:hover{
+	background: #FAFAFA;
+	transition: .1s ease-in;
 }
