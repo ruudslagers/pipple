@@ -1,20 +1,6 @@
 <?php 
   session_start(); 
 
-   echo $klantnaam;
-
-  if(isset($klantnaam) == 'coolblue') { 
-    header("location:../coolblue.php");
-  } else {
-    header("location:../pages-login.php");
-  }
-
-//  if(isset($_SESSION['klantnaam']) == 'philips') { 
-//    header("location:../philips.php");
-//  } else {
-//    header("location:../pages-login.php");
-//  }
-
   if (!isset($_SESSION['klantnaam'])) {
   	$_SESSION['msg'] = "Je moet eerst inloggen";
   	header('location: pages-login.php');
