@@ -24888,7 +24888,12 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
 }
 .card-box .afwezig{
     text-align: center;
+    cursor: pointer;
     display: block;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    color: #99d4fc;
 }
 
 .aanwezigheidLijst{
