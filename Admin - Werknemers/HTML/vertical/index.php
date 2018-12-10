@@ -237,8 +237,8 @@
 	                                include 'assets/db/connection.php';
 
 
-									$name = 'Matthew Kouwenberg';
-	                                $mail = 'matthew@pipple.nl';
+									$name = 'Bas Caron';
+	                                $mail = 'bas@pipple.nl';
 																		
 									
 									$exists = $conn->query("SELECT id FROM vrijmibo WHERE email = '$mail'");
@@ -285,30 +285,8 @@
 
 // 									Verversen van de browser als de gebruiker een optie heeft gekozen
 
-									if(isset($_POST['aanwezig'])){
-										
-										$aanwezig = "INSERT INTO vrijmibo (naam, email, status) VALUES ('$name', '$mail', 'aanwezig')";
-									    if(mysqli_num_rows($exists) == 0) {
-										    
-									    	if ($conn->query($aanwezig) === TRUE) {
-										    	echo "<script>window.location = ''</script>";
-											} 
-											
-										}
-
-									}
 									
-									elseif(isset($_POST['afwezig'])){
-		                                
-		                                
-		                                $update = "INSERT INTO vrijmibo (naam, email, status) VALUES ('$name', '$mail', 'afwezig')";
-		                                if ($conn->query($update) === TRUE) {
-											echo "<script>window.location = ''</script>";
-										} 
-		                                
-		                                
-		                            }    
-
+									include 'assets/db/insertUser.php';
 
 									
 	                                    
@@ -461,25 +439,40 @@
 
                                     <h4 class="header-title m-t-0 m-b-20">Nieuwsartikel toevoegen</h4>
                                     
+                                 
                                     
-                                        <fieldset class="form-group">
-                                                    <h6>
-                                                    <label>Gegevens</label></h6>
-                                                    <label>Titel</label>
-                                                    <input class="form-control" type="text" placeholder="Titel van het artikel…"><br>
-                                                    <label>Url</label>
-                                                    <input class="form-control" type="text" placeholder="Url van het artikel…">
-                                                </fieldset>
-                                     <div class="text-center">
-                                        
-                                      
-                                    <a href="assets/pipple-flash/PippleFlash#44.pdf" download="PippleFlash44" target="_blank">
-                                    <button class="btn btn-purple waves-effect waves-light btnpipflash btn-blue"> <span>Voeg nieuwsartikel toe</span> <i class="typcn typcn-document-add"></i> </button>
-                                    </a>
-                                         </div> 
+                                    <form action="" method="post" class="form-group">
+	                                    
+	                                    <label>Titel</label>
+	                                    <input class="form-control" type="text" placeholder="Titel van het artikel…" name="artikelTitel"><br>
+	                                    
+	                                    <label>URL</label>
+	                                    <input class="form-control" type="text" placeholder="Url van het artikel…" name="artikelUrl">
+	                                    
+	                                    <input name="addArtikel" type="submit" class="aanwezig" value="Voeg nieuwsartikel toe">
+                                    </form>
                                     
-
-                                    
+                                    <?php
+	                                    
+	                                
+		                            
+		                            $artikelTitel = $_POST['artikelTitel'];
+		                            $artikelUrl = $_POST['artikelUrl'];  
+		                            $datumVandaag = date("d-m-Y");  
+		                            
+		                            if (isset($_POST['addArtikel'])){
+			                            
+			                            $addArtikel = "INSERT INTO nieuwsartikelen (Titel, URL, Date) VALUES ('$artikelTitel', '$artikelUrl', '$datumVandaag')";
+			                            $checkIfExists = $conn->query("SELECT id FROM nieuwsartikelen WHERE artikelUrl = '$artikelUrl'");
+			                            
+									    if(mysqli_num_rows($checkIfExists) == 0) {
+									    	if ($conn->query($addArtikel) === TRUE) {
+											} 
+										}
+			                            
+		                            }
+	                                    
+	                                ?>
 
                         		</div>
                             </div><!-- end col-->
@@ -491,37 +484,52 @@
                                         <h4 class="header-title m-t-0 m-b-20">Nieuws artikelen</h4>
                                             <div class="nieuwsartikel">
                                                     <div class="row">
-                                                        <div class="col-md-6 col-xl-6">
-                                                            <div class="card-box tilebox-one">
-                                                                <a href="https://soundcloud.com/rudifreddieshow/deze-podcast-gaat-over-de-cijfers-die-ons-leiden-verleiden-en-misleiden" target="_blank">Podcast over cijfers die ons leiden</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 col-xl-6">
-                                                            <div class="card-box tilebox-one">
-                                                                <a href="https://medium.com/the-outlier/attracting-top-data-science-talent-878b7d81b072" target="_blank">Attracting Top Data Science Talent</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 col-xl-6">
-                                                            <div class="card-box tilebox-one">
-                                                                <a href="https://en.m.wikipedia.org/wiki/Buffon%27s_needle" target="_blank">Buffon's Needle</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 col-xl-6">
-                                                            <div class="card-box tilebox-one">
-                                                                <a href="https://computerworld.nl/development/107064-6-oorzaken-van-machine-learning-mislukkingen" target="_blank">6 oorzaken van machine learning-mislukkingen</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 col-xl-6">
-                                                            <div class="card-box tilebox-one">
-                                                                <a href="https://towardsdatascience.com/tableau-esque-drag-and-drop-gui-visualization-in-r-901ee9f2fe3f" target="_blank">Tableau-like Drag and Drop GUI Visualization in R</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 col-xl-6">
-                                                            <div class="card-box tilebox-one">
-                                                                <a href="https://www.ad.nl/binnenland/datalek-bij-achmea-gegevens-duizenden-verzekerden-op-straat~a542695e/" target="_blank">Datalek bij Achmea</a>
-                                                            </div>
-                                                        </div>
-                                                        </div>
+                                                       
+														<?php
+														
+														$artikelShow = "SELECT `Titel`, `URL`, `Date` FROM `nieuwsartikelen` ORDER BY`ID` DESC";
+														$echoArtikel = $conn->query($artikelShow);
+														
+														$counter = 0;
+														$max = 6;
+														
+														
+														if ($echoArtikel->num_rows > 0) {
+														    // output data of each row
+														    while($row = $echoArtikel->fetch_assoc() and ($counter < $max)) {
+															    
+															    $counter++;
+															    $tijdNu = time(); // or your date as well
+																$dateUitDB = strtotime($row["Date"]);
+																$datediff = $tijdNu - $dateUitDB;
+																$dateVerschil = round($datediff / (60 * 60 * 24));
+																
+																if ($dateVerschil == 0){
+	                                                                $dateVerschil = 'Vandaag geplaatst';
+                                                                }elseif ($dateVerschil == 1){
+	                                                                $dateVerschil = $dateVerschil .' dag geleden';
+                                                                }else{
+	                                                                $dateVerschil = $dateVerschil .' dagen geleden';
+                                                                }
+																															    
+															   echo
+															   	'<div class="col-md-6 col-xl-6">
+		                                                            <a href="'.$row["URL"].'" target="_blank">
+		                                                            	<div class="card-box tilebox-one artikel">'.$row["Titel"].'
+		                                                                	<span>'. $dateVerschil .'</span>
+																		</div>
+																	</a>
+		                                                        </div>
+		                                                        ';
+															    
+														    }
+														} else {
+														    echo "0 results";
+														} 
+														
+														?>
+                                                       
+                                                        
                                                     </div>
 
                                             </div>
@@ -694,6 +702,12 @@
         
         <!-- Count down js -->
         <script src="assets/plugins/count-down/jquery.lwtCountdown-1.0.js"></script>
+        
+        <script>
+		if ( window.history.replaceState ) {
+		  window.history.replaceState( null, null, window.location.href );
+		}
+		</script>
         
         <script>
             var acc = document.getElementsByClassName("accordion");
